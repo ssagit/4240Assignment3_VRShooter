@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: manuallyResizeContentPanels
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223237602148641016, guid: ddb963bcde7d8a04a88b3ee4709f46c7, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 3680607432603037613}
     - target: {fileID: 224586678184848430, guid: ddb963bcde7d8a04a88b3ee4709f46c7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -222,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224586678184848430, guid: ddb963bcde7d8a04a88b3ee4709f46c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31
+      value: 1.298
       objectReference: {fileID: 0}
     - target: {fileID: 224586678184848430, guid: ddb963bcde7d8a04a88b3ee4709f46c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -246,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224586678184848430, guid: ddb963bcde7d8a04a88b3ee4709f46c7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.18
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: 224850501658498312, guid: ddb963bcde7d8a04a88b3ee4709f46c7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -920,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2999209778498402445, guid: 567797cea00017d46bd10da23b17504b, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7309371711813577106, guid: 567797cea00017d46bd10da23b17504b, type: 3}
       propertyPath: m_Name
@@ -3935,7 +3939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3292487928359038694, guid: 48240adbf6b63444db390dc45dd6b1ce, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4594533815283680927, guid: 48240adbf6b63444db390dc45dd6b1ce, type: 3}
       propertyPath: m_Name
