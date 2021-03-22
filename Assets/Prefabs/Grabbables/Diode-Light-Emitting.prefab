@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 6107191211648440782}
   - component: {fileID: 3323444870653386485}
   - component: {fileID: 2190754729220055443}
-  - component: {fileID: 4633664887884387748}
-  m_Layer: 0
+  - component: {fileID: 8671572863548072977}
+  - component: {fileID: 3830878489241314626}
+  - component: {fileID: 5739715904899874706}
+  m_Layer: 8
   m_Name: Diode-Light-Emitting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,36 +86,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!60 &4633664887884387748
-PolygonCollider2D:
+--- !u!114 &8671572863548072977
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2180928689986614243}
   m_Enabled: 1
-  m_Density: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+  m_materialColorField: _OutlineColor
+--- !u!136 &3830878489241314626
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180928689986614243}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -3.2735883e-13, y: 0.00006124556}
-      - {x: -0.000056112345, y: 0.00002047756}
-      - {x: -0.00003467933, y: -0.000045486457}
-      - {x: 0.000034679342, y: -0.00004548645}
-      - {x: 0.00005611234, y: 0.00002047757}
+  m_Enabled: 1
+  m_Radius: 0.000067519635
+  m_Height: 0.000113508904
+  m_Direction: 1
+  m_Center: {x: -3.2735883e-13, y: 0.000002245557, z: 0.000067519635}
+--- !u!54 &5739715904899874706
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180928689986614243}
+  serializedVersion: 2
+  m_Mass: 0.2
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6435471143973375762
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +145,7 @@ GameObject:
   - component: {fileID: 5831497465731876911}
   - component: {fileID: 3056041123396275618}
   - component: {fileID: 8913817290595041047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reflector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +226,7 @@ GameObject:
   - component: {fileID: 4081842828957291885}
   - component: {fileID: 3651168556904970367}
   - component: {fileID: 5332724406484868228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
