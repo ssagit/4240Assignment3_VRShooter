@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    
+    bool active = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,16 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_Button2") > 0)
+        if (Input.GetAxis("Oculus_CrossPlatform_Button2") > 0
+            || Input.GetKeyDown(KeyCode.A))
         {
-            transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
+            if (!active) {
+                transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
+                active = true;
+            } else {
+                transform.localScale = new Vector3(0, 0, 0);
+                active = false;
+            }
         }
     }
 }
