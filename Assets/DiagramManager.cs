@@ -45,19 +45,18 @@ public class DiagramManager : MonoBehaviour
         {
             img1.enabled = false;
             img2.enabled = true;
-            Debug.Log(num);
         }
         else if (num % 3 == 1)
         {
             img2.enabled = false;
             img3.enabled = true;
-            Debug.Log(num);
         }
         else
         {
             img3.enabled = false;
             img1.enabled = true;
-            Debug.Log(num);
         }
+
+        Debug.Log("Image " + num % 3 + " displayed");
     }
 }

@@ -6,28 +6,49 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    private int keyDown = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         transform.localScale = new Vector3(0, 0, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_Button4") > 0 || Input.GetKeyDown(KeyCode.B))
+        if (OVRInput.Get(OVRInput.Button.Two) || Input.GetKey(KeyCode.B))
         {
-            transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
-        }
+            if (keyDown < 0)
+                keyDown = 0;
+            keyDown++;
+            }
+            else
+            {
+                if (keyDown > 0)
+                    keyDown = 0;
+                keyDown--;
+            }
+    
+            if (keyDown == 1)
+                OpenMenu();
+    }
+    
+    // Update is called once per frame
+    void OpenMenu()
+    {
+        transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
+        Debug.Log("Opened Menu");
     }
 
     public void CloseMenu()
     {
         transform.localScale = new Vector3(0, 0, 0);
+        Debug.Log("Closed Menu");
     }
 
     public void ResetComponents()
     {
         SceneManager.LoadScene(1);
+        Debug.Log("Resetting Scene");
     }
 }
