@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class DiagramManager : MonoBehaviour
-{
+{ 
     public Image img1;
     public Image img2;
     public Image img3;
-    int num = 0;
+    private int num = 0;
+    private int keyDown = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,32 +19,45 @@ public class DiagramManager : MonoBehaviour
         img3.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_Button2") > 0 || Input.GetKeyDown(KeyCode.A))
+        if (OVRInput.Get(OVRInput.Button.One) || Input.GetKey(KeyCode.A))
         {
-            num = num + 1;
-            SwapScreen(num);
+            if (keyDown < 0)
+                keyDown = 0;
+            keyDown++;
         }
+        else
+        {
+            if (keyDown > 0)
+                keyDown = 0;
+            keyDown--;
+        }
+ 
+        if (keyDown == 1)
+            num++;
+            SwapScreen(num);
     }
 
     void SwapScreen(int num)
     {
         if (num % 3 == 0)
-            {
-                img1.enabled = false;
-                img2.enabled = true;
-            }
-            else if (num % 3 == 1)
-            {
-                img2.enabled = false;
-                img3.enabled = true;
-            }
-            else
-            {
-                img3.enabled = false;
-                img1.enabled = true;
-            }
+        {
+            img1.enabled = false;
+            img2.enabled = true;
+            Debug.Log(num);
+        }
+        else if (num % 3 == 1)
+        {
+            img2.enabled = false;
+            img3.enabled = true;
+            Debug.Log(num);
+        }
+        else
+        {
+            img3.enabled = false;
+            img1.enabled = true;
+            Debug.Log(num);
+        }
     }
 }
