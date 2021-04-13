@@ -48,7 +48,7 @@ public class MenuManager : MonoBehaviour
 
     public void ResetComponents()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
         Debug.Log("Resetting Scene");
     }
 }
